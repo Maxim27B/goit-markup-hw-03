@@ -44,10 +44,14 @@ body {
 }
 
 .section {
-    padding: 120px 156px;
+    padding: 120px 0;
 }
 
 /* ========== Header styles========== */
+.header {
+    border-bottom: 1px solid #e7e9fc;
+}
+
 .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -87,7 +91,7 @@ body {
     letter-spacing: 0.02em;
     color: #2e2f42;
     display: block;
-    padding: 24px;
+    padding: 24px 0;
 }
 
 .menu-item.active {
@@ -111,10 +115,10 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
     display: block;
-    padding: 24px;
+    padding: 24px 0;
 }
 
-nav {
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -128,10 +132,10 @@ nav {
 /* ========== Hero-section styles ========== */
 .hero {
     background-color: #2e2f42;
+    padding: 188px 0;
 }
 
 .hero-container {
-    padding: 188px;
     margin: 0 auto;
 }
 
@@ -141,7 +145,7 @@ nav {
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 48px;
-    max-width: 500px;
+    max-width: 496px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -160,6 +164,7 @@ nav {
     margin: 0 auto;
     padding-left: 24px;
     padding-right: 24px;
+    border: none;
 }
 
 .hero-button:hover,
@@ -187,6 +192,7 @@ nav {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .skills-list {
@@ -226,7 +232,11 @@ nav {
 
 .our-team-list-item {
     background-color: #FFFFFF;
-    padding-bottom: 32px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.names-jobs {
+    padding: 32px 0;
 }
 
 .our-team-decription-title {
@@ -236,7 +246,6 @@ nav {
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-align: center;
-    margin-top: 32px;
     margin-bottom: 8px;
 }
 
@@ -265,8 +274,9 @@ nav {
     column-gap: 24px;
 }
 
-.portfolio-list-item {
-    padding-bottom: 32px;
+.portfolio-text {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
 }
 
 .portfolio-decription-title {
@@ -275,32 +285,32 @@ nav {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    padding-top: 32px;
-    padding-left: 16px;
 }
 
 .portfolio-decription {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding-left: 16px;
     margin-top: 8px;
 }
 
 /* ========== Footer styles ========== */
 .footer {
     background: #2e2f42;
-    padding: 100px 156px;
+    padding: 100px 0;
 }
 
-.footer-text {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #f4f4fd;
-    margin-top: 16px;
-    display: block;
-    width: 264px;
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4d5ae5;
+
 }
 
 .footer-logo-part {
@@ -309,4 +319,13 @@ nav {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #f4f4fd;
+}
+
+.footer-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    display: block;
+    width: 264px;
 }
