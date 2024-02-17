@@ -1,11 +1,4 @@
 /* ========== Common styles ========== */
-body {
-    font-family: "Roboto", sans-serif;
-    color: #434455;
-    background-color: #FFFFFF;
-    margin: 0;
-}
-
 h1,
 h2,
 h3,
@@ -13,14 +6,6 @@ h4,
 p {
     margin-top: 0;
     margin-bottom: 0;
-}
-
-.container {
-    width: 1158px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 img {
@@ -43,13 +28,27 @@ button {
     display: block;
 }
 
+body {
+    font-family: "Roboto", sans-serif;
+    color: #434455;
+    background-color: #FFFFFF;
+    margin: 0;
+}
+
+.container {
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .section {
     padding: 120px 156px;
 }
 
 /* ========== Header styles========== */
 .logo {
-    display: inline;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -70,11 +69,14 @@ button {
     color: #2e2f42;
 }
 
-
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .menu {
     display: flex;
-    flex-direction: row;
     gap: 40px;
 }
 
@@ -84,6 +86,8 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    display: block;
+    padding: 24px;
 }
 
 .menu-item.active {
@@ -98,7 +102,6 @@ button {
 .address-list {
     font-style: normal;
     display: flex;
-    flex-direction: row;
     gap: 40px;
 }
 
@@ -107,8 +110,15 @@ button {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    display: block;
+    padding: 24px;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .address-item:hover,
 .address-item:focus {
@@ -118,10 +128,23 @@ button {
 /* ========== Hero-section styles ========== */
 .hero {
     background-color: #2e2f42;
-    height: 600px;
-    margin: 0 auto;
-    padding: 188px 472px;
+}
 
+.hero-container {
+    padding: 188px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 48px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .hero-button {
@@ -132,9 +155,11 @@ button {
     letter-spacing: 0.04em;
     color: #ffffff;
     border-radius: 4px;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .hero-button:hover,
@@ -142,17 +167,19 @@ button {
     background: #404bbf;
 }
 
-.hero-title {
-    font-size: 56px;
-    line-height: 1.07;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: #FFFFFF;
-    margin-bottom: 48px;
-}
-
 /* ========== Skills-section styles ========== */
-
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 .skills-list-title {
     font-weight: 500;
@@ -164,12 +191,11 @@ button {
 
 .skills-list {
     display: flex;
-    flex-direction: row;
     gap: 24px;
 }
 
 .skills-list-item {
-    width: 264px;
+    width: calc((100%-72px)/4);
 }
 
 .skills-description {
@@ -194,19 +220,27 @@ button {
 }
 
 .our-team-list {
-    background-color: #FFFFFF
+    display: flex;
+    gap: 24px;
 }
 
-.our-team-item-title {
+.our-team-list-item {
+    background-color: #FFFFFF;
+    padding-bottom: 32px;
+}
+
+.our-team-decription-title {
     color: #2e2f42;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-align: center;
+    margin-top: 32px;
+    margin-bottom: 8px;
 }
 
-.our-team-item {
+.our-team-decription {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -224,18 +258,33 @@ button {
     margin-bottom: 72px;
 }
 
-.portfolio-item-title {
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.portfolio-list-item {
+    padding-bottom: 32px;
+}
+
+.portfolio-decription-title {
     color: #2e2f42;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-left: 16px;
 }
 
-.portfolio-item {
+.portfolio-decription {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding-left: 16px;
+    margin-top: 8px;
 }
 
 /* ========== Footer styles ========== */
